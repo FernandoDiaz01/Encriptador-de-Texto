@@ -11,47 +11,36 @@
 
 <body>
     <div class="contenedor">
-        <!-- Encabezado -->
+
         <header class="header">
-            <div class="contenedor__logo">
-                <img src="./images/logo.png" alt="Logo Alura" class="logo" />
-            </div>
+            <img src="./images/logo.png" alt="Logo Alura" class="logo" />
         </header>
-        <!-- Sección Principal -->
-         <main>
-            <section class="texto__encriptador">
-                <textarea class="encriptar" placeholder="Ingrese el texto aquí" name="" id="texto-a-encriptar"></textarea>
+
+        <main>
+            <section class="texto__encriptador seccion">
+                <textarea class="encriptar" placeholder="Ingrese el texto aquí"></textarea>
                 <div class="contenedor__msg__advertencia">
-                    <img src="./images/Vector.svg" alt="Sólo letras minúsculas y sin acentos">
+                    <img class="img__logo_advertencia" src="./images/Vector.svg" alt="Sólo letras minúsculas y sin acentos">
                     <p class="msg__advertencia">Sólo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="contenedor__encriptador">
-                    <button type="submit" class="btn__encriptador" aria-label="Encriptar texto">Encriptar</button>
-                    <button type="submit" class="btn__desencriptador" aria-label="Desencriptar texto">Desencriptar</button>
+                    <button onclick="btnEncriptar()" class="btn__encriptador" aria-label="Encriptar texto">Encriptar</button>
+                    <button onclick="btnDesencriptar()" class="btn__desencriptador" aria-label="Desencriptar texto">Desencriptar</button>
                 </div>
             </section>
-            <section class="contenedor">
-                <div class="contenedor__traduccion">
-                    <div class="contenedor__imagen">
-                        <img class="img__traduccion" src="./images/Muñeco.png" alt="Muñeco con lupa">
-                    </div>
-                    <div class="contendor__texto__traduccion" id="texto__encriptado">
-                        <h2 class="texto__traduccion">Ningún mensaje fue encontrado</h2>
-                        <p class="parrafo" id="parrafo">Ingresa el texto que quieras encriptar o desencriptar </p>
-                    </div>
-                    <textarea type="mensaje" name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje" readonly></textarea>
-                    <button type="submit" class="btn__copiar" aria-label="Copiar texto encriptado">Copiar</button>
+
+            <section class="seccion__traduccion seccion">
+                <textarea class="evaluar" readonly></textarea>
+                <div class="contenedor__msg__copiar">
+                    <p class="msg__copiar">Aprentado el botón podes copiar el texto encriptado</p>
+                </div>
+                <div class="contenedor__btn__copiar">
+                    <button onclick="btnCopiar()" class="btn__copiar" aria-label="Copiar texto encriptado">Copiar</button>
                 </div>
             </section>
-         </main>
-         <!-- Footer -->
-          <footer class="footer">
-            <p class="copyright">Copyright 2024 - Encriptador de texto - Desarrollado por Fernando Diaz</p>
-            <a href="#" rel="noopener noreferrer"><img src="./images/linkedin.svg" alt="LinkedIn"></a>
-            <a href="#" rel="noopener noreferrer"><img src="./images/github.svg" alt="GitHub"></a>
-          </footer>
+        </main>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="./js/encriptador.js"></script>
 </body>
 </html>
